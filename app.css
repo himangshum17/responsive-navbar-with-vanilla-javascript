@@ -12,8 +12,13 @@ header .navbar .logo a{font-size: 2.4rem;font-weight: bold;color: #292929;}
 header .navbar .navigation{margin-left: auto;}
 header .navbar .navigation.active{display: block;}
 header .navbar .navigation nav ul{display: flex;justify-content: flex-end;}
-header .navbar .navigation nav ul li a{display: flex;padding: 0 1.6rem;font-size: 1.6rem;color: #3b3b3b;}
+header .navbar .navigation nav ul li{position: relative;}
+header .navbar .navigation nav ul li a{display: flex;padding: .4rem 1.6rem;font-size: 1.6rem;color: #3b3b3b;}
 header .navbar .navigation nav ul li a:hover{color: #ff912b;}
+header .navbar .navigation nav ul li .dropdown-menu{position: absolute;top: 100%;left: 0;width: 160px;background-color: #ececec;padding: .8rem 0;display: none;}
+header .navbar .navigation nav ul li .dropdown-menu a{padding: .6rem 1.6rem;font-size: 1.2rem;}
+header .navbar .navigation nav ul li .dropdown-menu ul{flex-direction: column;}
+header .navbar .navigation nav ul li.dropdown:hover .dropdown-menu{display: block;}
 header .navbar .menu-button{display: none;margin-left: auto;}
 header .navbar .menu-button button{border: none;background: transparent;cursor: pointer;}
 @media (max-width:991px){
