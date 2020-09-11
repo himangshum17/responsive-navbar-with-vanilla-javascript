@@ -1,19 +1,14 @@
 const menuBtn = document.querySelector(".menu-button button");
 const menuIcon = document.querySelector(".menu-button button img");
 const naviGation = document.querySelector(".navigation");
-let dropdownToggle = document.querySelectorAll(".dropdown-toggle");
-let dropdownMenu = document.querySelectorAll(".dropdown-menu");
+const dropdown = document.querySelectorAll(".dropdown");
+const dropdownMenu = document.querySelectorAll(".dropdown-menu");
+const dropdownIcon = document.querySelectorAll(".dropdown-toggle img");
 
-for (let i = 0; i < dropdownToggle.length; i++) {
+for (let i = 0; i < dropdown.length; i++) {
     if(window.innerWidth > 992){
-        dropdownToggle[i].addEventListener("mouseenter", function() {
-            dropdownToggle[i].parentElement.classList.add("active");
-        });
-    }
-    if(window.innerWidth < 991){
-        dropdownToggle[i].addEventListener("click", function() {
-            console.log("hello");
-            dropdownToggle[i].parentElement.classList.toggle("active");
+        dropdown[i].addEventListener("mouseenter", function() {
+            dropdown[i].classList.add("active");
         });
     }
 }
@@ -22,6 +17,14 @@ for (let i = 0; i < dropdownMenu.length; i++) {
     dropdownMenu[i].addEventListener("mouseleave", function() {
         dropdownMenu[i].parentElement.classList.remove("active");
     });
+}
+
+for (let i = 0; i < dropdownIcon.length; i++) {
+    if(window.innerWidth < 991){
+        dropdownIcon[i].addEventListener("click", function() {
+            dropdownIcon[i].parentElement.parentElement.classList.toggle("active");
+        });
+    }
 }
 
 function openNavigation() {
