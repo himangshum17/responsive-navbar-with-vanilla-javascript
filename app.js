@@ -4,11 +4,15 @@ const naviGation = document.querySelector(".navigation");
 const dropdown = document.querySelectorAll(".dropdown");
 const dropdownMenu = document.querySelectorAll(".dropdown-menu");
 const dropdownIcon = document.querySelectorAll(".dropdown-toggle img");
+console.log(dropdownIcon);
 
 for (let i = 0; i < dropdown.length; i++) {
     if(window.innerWidth > 992){
         dropdown[i].addEventListener("mouseenter", function() {
             dropdown[i].classList.add("active");
+        });
+        dropdown[i].addEventListener("mouseleave", function() {
+            dropdown[i].classList.remove("active");
         });
     }
 }
@@ -19,9 +23,11 @@ for (let i = 0; i < dropdownMenu.length; i++) {
     });
 }
 
+
 for (let i = 0; i < dropdownIcon.length; i++) {
     if(window.innerWidth < 991){
         dropdownIcon[i].addEventListener("click", function() {
+            console.log("hello");
             dropdownIcon[i].parentElement.parentElement.classList.toggle("active");
         });
     }
