@@ -16,7 +16,8 @@ header .navbar .navigation nav ul li{position: relative;}
 header .navbar .navigation nav ul li a{display: flex;padding: .4rem 1.6rem;font-size: 1.6rem;color: #3b3b3b;position: relative;}
 header .navbar .navigation nav ul li a:hover{color: #ff912b;}
 header .navbar .navigation nav ul li .dropdown-menu{position: absolute;top: 100%;left: 0;width: 160px;background-color: #ffffff;padding: .8rem 0;box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);border-radius: 4px;transform: translateY(24px);opacity: 0;transition: all .4s ease-in-out;max-height: 0;pointer-events: none;z-index: 1;}
-header .navbar .navigation nav ul li .dropdown-menu a{padding: .6rem 1.6rem;font-size: 1.2rem;}
+header .navbar .navigation nav ul li .dropdown-menu a{padding: .6rem 1.6rem;font-size: 1.2rem;align-items: center;}
+header .navbar .navigation nav ul li .dropdown-menu a img{opacity: .5;margin-right: 8px;height: 16px;width: 16px;}
 header .navbar .navigation nav ul li .dropdown-menu ul{flex-direction: column;}
 header .navbar .navigation nav ul li.dropdown.active .dropdown-menu{opacity: 1;transform: translateY(0);max-height: 1000px;pointer-events: all;}
 header .navbar .navigation nav ul li.dropdown > a img{position: absolute;content: "";height: 16px;width: 16px;background: url(/icon/chevron-down.svg);background-size: cover;transition: all .4s ease-in-out;right: -4px;opacity: .5;}

@@ -4,7 +4,6 @@ const naviGation = document.querySelector(".navigation");
 const dropdown = document.querySelectorAll(".dropdown");
 const dropdownMenu = document.querySelectorAll(".dropdown-menu");
 const dropdownIcon = document.querySelectorAll(".dropdown-toggle img");
-console.log(dropdownIcon);
 
 for (let i = 0; i < dropdown.length; i++) {
     if(window.innerWidth > 992){
@@ -22,7 +21,6 @@ for (let i = 0; i < dropdownMenu.length; i++) {
         dropdownMenu[i].parentElement.classList.remove("active");
     });
 }
-
 
 for (let i = 0; i < dropdownIcon.length; i++) {
     if(window.innerWidth < 991){
