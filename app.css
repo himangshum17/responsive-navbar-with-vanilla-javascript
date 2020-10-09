@@ -6,7 +6,7 @@ ul{padding: 0;margin:0;list-style-type: none;}
 a{text-decoration: none;transition: all .4s ease-in-out;}
 button:focus{outline: none;}
 /* navbar */
-header{margin-top: 3.2rem;}
+header{padding: 2.4rem 0 0;}
 header .navbar{display: flex;align-items: center;flex-wrap: wrap;padding: 1.6rem 0;background-color: #ffffff;padding: 2.4rem 1.6rem;border-radius: 8px;box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);position: relative;}
 header .navbar .logo a{font-size: 2.4rem;font-weight: bold;color: #292929;}
 header .navbar .navigation{margin-left: auto;}
@@ -31,6 +31,7 @@ header .navbar .navigation nav ul li.megamenu .dropdown-menu > ul li{flex: 0 0 2
 header .navbar .navigation nav ul li.megamenu .dropdown-menu > ul li h5{font-size: 1.2rem;text-transform: uppercase;letter-spacing: .5px;color: #888888;margin: 0 0 1.6rem;}
 header .navbar .menu-button{display: none;margin-left: auto;}
 header .navbar .menu-button button{border: none;background: transparent;cursor: pointer;padding: 0;}
+.fixednav header{position: fixed;top: 0;left: 0;width: 100%;z-index: 9;padding: 0;}
 @media (max-width:991px){
     header .navbar .logo a{font-size: 1.6rem;}
     header .navbar .navigation{display: none;order: 3;flex-basis: 100%;margin-top: .8rem;}
@@ -41,6 +42,13 @@ header .navbar .menu-button button{border: none;background: transparent;cursor: 
     header .navbar .navigation nav ul li.megamenu .dropdown-menu{padding: 0;}
     header .navbar .navigation nav ul li.megamenu.active .dropdown-menu{transform: translateY(0);}
     header .navbar .navigation nav ul li.megamenu .dropdown-menu > ul{flex-direction: column;max-height: 360px;overflow-y: auto;}
+    header .navbar .navigation nav ul li.megamenu .dropdown-menu > ul li h5{margin-top: 24px;}
     header .navbar .menu-button{display: block;order: 2;}
 }
 /* navbar */
+/* content */
+.content{padding: 96px 0;}
+.content .content-inner{background-color: #ffffff;padding: 2.4rem 1.6rem;border-radius: 8px;box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);}
+.content h1{font-size: 4rem;margin: 3.2rem 0 1.6rem;}
+.content p{font-size: 1.6rem;}
+/* content */

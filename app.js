@@ -1,3 +1,5 @@
+const header = document.querySelector("header");
+const headerTop = header.offsetTop;
 const menuBtn = document.querySelector(".menu-button button");
 const menuIcon = document.querySelector(".menu-button button img");
 const naviGation = document.querySelector(".navigation");
@@ -25,7 +27,6 @@ for (let i = 0; i < dropdownMenu.length; i++) {
 for (let i = 0; i < dropdownIcon.length; i++) {
     if(window.innerWidth < 991){
         dropdownIcon[i].addEventListener("click", function() {
-            console.log("hello");
             dropdownIcon[i].parentElement.parentElement.classList.toggle("active");
         });
     }
@@ -42,5 +43,17 @@ function openNavigation() {
     naviGation.classList.toggle("active"); 
 }
 menuBtn.addEventListener("click", openNavigation);
+
+function fixedNav(){
+    if(window.scrollY > headerTop){
+        document.body.style.paddingTop = header.offsetHeight + "px";
+        document.body.classList.add("fixednav");
+    }else{
+        document.body.style.paddingTop = 0;
+        document.body.classList.remove("fixednav");
+    }
+}
+
+window.addEventListener("scroll", fixedNav);
 
 
